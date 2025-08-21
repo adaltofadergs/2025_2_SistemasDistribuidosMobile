@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula01</title>
+</head>
+<body>
+    
+    <div id="minhaDiv"></div>
+    <input type="text" id="txtValor">
+    <button onclick="dobrar()">Dobrar</button>
+
+    <script>
+        var mDiv = document.getElementById("minhaDiv")
+        mDiv.innerHTML = "Olá <i>Pessoal</i>"
+        mDiv.style.background = "#F00"
+        mDiv.style.color = "#FFF"
+        mDiv.style.width = "50%"
+
+        function dobrar(){
+            const valor = document.getElementById("txtValor").value
+            if( valor != "" && !isNaN(valor) ){
+                result = parseFloat( valor ) * 2
+                alert("Resultado: " + result )
+            }
+        }
+
+    </script>
+
+    <hr> 
+    <input type="text" id="txtNome" placeholder="Digite um nome" >
+    <button onclick="add()">Adicionar</button>
+    <div id="lista"></div>
+    <script>
+        function add(){
+            const txtNome = document.getElementById("txtNome")
+            const nome = txtNome.value
+            if( nome != "" ){
+                document.getElementById("lista").innerHTML += "<br>" + nome
+            }
+            txtNome.value = ""
+        }
+    </script>
+
+
+
+
+</body>
+</html>
